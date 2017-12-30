@@ -5,6 +5,8 @@ RUN apk update -f \
   openssl \
   curl \
   socat \
+  python py-pip \
+  && pip install dns-lexicon \
   && rm -rf /var/cache/apk/*
 
 ENV LE_CONFIG_HOME /acme.sh
